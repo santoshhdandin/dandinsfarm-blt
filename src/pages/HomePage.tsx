@@ -11,29 +11,41 @@ export default function HomePage() {
           </div>
         </div>
 
-        <h1 className="text-5xl md:text-7xl font-bold mb-4 bg-gradient-to-r from-green-400 to-emerald-600 bg-clip-text text-transparent">
-          Dandin's Farm
-        </h1>
+        {/* Stylish Title with Multiple Effects */}
+        <div className="mb-6 relative">
+          {/* Background glow effect */}
+          <div className="absolute inset-0 blur-3xl opacity-30">
+            <h1 className="text-5xl md:text-7xl font-bold bg-gradient-to-r from-green-400 via-emerald-500 to-green-600 bg-clip-text text-transparent">
+              Dandin's Farm
+            </h1>
+          </div>
+          
+          {/* Main title with enhanced gradient and shadow */}
+          <h1 className="relative text-6xl md:text-8xl font-black mb-2 bg-gradient-to-r from-green-300 via-emerald-400 to-green-500 bg-clip-text text-transparent drop-shadow-2xl tracking-tight hover:scale-105 transition-transform duration-300">
+            Dandin's Farm
+          </h1>
+          
+          {/* Decorative underline */}
+          <div className="flex items-center justify-center gap-2 mt-4">
+            <div className="h-1 w-12 bg-gradient-to-r from-transparent via-green-500 to-green-400 rounded-full"></div>
+            <Leaf size={20} className="text-green-400 animate-bounce" />
+            <div className="h-1 w-12 bg-gradient-to-l from-transparent via-green-500 to-green-400 rounded-full"></div>
+          </div>
+        </div>
 
-        <p className="text-2xl md:text-3xl text-zinc-400 mb-6">
-          Complete Organic
-        </p>
 
         <div className="flex items-center justify-center space-x-2 text-zinc-500 mb-8">
           <MapPin size={20} />
-          <span>Karnataka, India</span>
+          <span>Haveri, Karnataka, India</span>
         </div>
 
-        <div className="max-w-2xl mx-auto mb-12">
-          <p className="text-lg text-zinc-300 leading-relaxed mb-6">
-            Welcome to Dandin's Farm, where we practice complete organic farming with passion and dedication.
-            Our farm is a testament to sustainable agriculture, growing premium quality fruits and crops
-            without any chemical fertilizers or pesticides.
-          </p>
-          <p className="text-lg text-zinc-400 leading-relaxed">
-            We believe in harmony with nature, nurturing the soil and plants with traditional organic methods
-            combined with modern sustainable practices. Every fruit and crop from our farm is grown with care,
-            ensuring the highest quality and nutritional value for our community.
+        <div className="flex justify-center mb-8">
+          <SocialLinks />
+        </div>
+		
+        <div className="max-w-9xl mx-auto mb-12">
+          <p className="text-lg text-zinc-150 leading-relaxed mb-6">
+            We grow premium fruits and crops using 100% organic, chemical-free methods. Blending traditional wisdom with modern sustainable practices, we nurture the soil, respect nature, and deliver fresh. Every fruit and crop from our farm is grown with care, ensuring the highest quality and nutritional value for our community.
           </p>
         </div>
 
@@ -48,16 +60,14 @@ export default function HomePage() {
           </div>
         </div>
 
-        <div className="flex justify-center mb-8">
-          <SocialLinks />
-        </div>
+
 
         <div className="grid grid-cols-2 md:grid-cols-4 gap-6 max-w-3xl mx-auto">
           {[
-            { label: 'Acres', value: '10+' },
+            { label: 'Acres', value: '6+' },
             { label: 'Crop Varieties', value: '5+' },
-            { label: 'Years Experience', value: '15+' },
-            { label: 'Happy Customers', value: '500+' },
+            { label: 'Years Experience', value: '10+' },
+            { label: 'Happy Customers', value: '100+' },
           ].map((stat) => (
             <div key={stat.label} className="bg-zinc-900/50 rounded-lg p-6 border border-zinc-800">
               <div className="text-3xl font-bold text-green-400 mb-2">{stat.value}</div>
@@ -65,6 +75,7 @@ export default function HomePage() {
             </div>
           ))}
         </div>
+		
       </div>
     </div>
   );
