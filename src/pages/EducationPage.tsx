@@ -3,36 +3,40 @@ import { Youtube, PlayCircle, BookOpen, Lightbulb } from 'lucide-react';
 export default function EducationPage() {
   const playlists = [
     {
-      id: 'smart-farming',
-      title: 'Smart Farming',
-      description: 'Learn how to use technology and innovative techniques to make farming more efficient and productive.',
-      videoCount: 15,
-      icon: Lightbulb,
-      color: 'from-blue-600 to-cyan-700',
-    },
-    {
       id: 'organic-farming',
-      title: 'Organic Farming',
+      title: 'ORGANIC FARMING Videos (ಸಾವಯವ ಕೃಷಿ)',
       description: 'Complete guide to organic farming practices, from soil preparation to harvest without using chemicals.',
       videoCount: 20,
       icon: BookOpen,
       color: 'from-green-600 to-emerald-700',
+      url: 'https://www.youtube.com/watch?v=w212ATtyva4&list=PLYgzBw4kk-eH6GqXfXE8_OYqy0vsD6pgY',
     },
     {
-      id: 'natural-farming',
-      title: 'Natural Farming',
-      description: 'Discover zero-budget natural farming techniques that work in harmony with nature.',
-      videoCount: 12,
-      icon: PlayCircle,
-      color: 'from-lime-600 to-green-700',
+      id: 'smart-farming',
+      title: 'SMART FARMING TIPS Videos (ಸ್ಮಾರ್ಟ್ ಕೃಷಿ ಪದ್ಧತಿ)',
+      description: 'Learn how to use technology and innovative techniques to make farming more efficient and productive.',
+      videoCount: 15,
+      icon: Lightbulb,
+      color: 'from-blue-600 to-cyan-700',
+      url: 'https://www.youtube.com/watch?v=cSr_rlGT1IA&list=PLYgzBw4kk-eG2d2K3Zo2FXvWEKenaxPdn',
     },
     {
       id: 'profit-model',
-      title: '1 Acre Profit Model',
+      title: 'One Acre Profit Model Videos (1 ಎಕರೆ… ಲಾಭದ ಸೂತ್ರ)',
       description: 'Learn how to maximize profits from just one acre of land with strategic crop planning and management.',
       videoCount: 18,
       icon: Youtube,
       color: 'from-amber-600 to-orange-700',
+      url: 'https://www.youtube.com/watch?v=7_DWeKVtlBo&list=PLYgzBw4kk-eEp-bRe91C5_taZELvSCHIh',
+    },
+    {
+      id: 'crop-care',
+      title: 'Crop Care and Tips Videos (ಬೆಳೆ ಪಾಲನೆ ಹಾಗೂ ಮಾರ್ಗದರ್ಶನ)',
+      description: 'Expert guidance on crop care, maintenance, and tips for healthy plant growth and better yields.',
+      videoCount: 25,
+      icon: PlayCircle,
+      color: 'from-lime-600 to-green-700',
+      url: 'https://www.youtube.com/watch?v=CrFNHRdZmOE&list=PLYgzBw4kk-eEPzdSm1TRZmg-IEMCGCC2Q',
     },
   ];
 
@@ -78,7 +82,7 @@ export default function EducationPage() {
           {playlists.map((playlist) => (
             <a
               key={playlist.id}
-              href="https://www.youtube.com/@FarmingWithAIRaitha"
+              href={playlist.url}
               target="_blank"
               rel="noopener noreferrer"
               className="group bg-zinc-900/50 rounded-2xl overflow-hidden border border-zinc-800 hover:border-green-600 transition-all"

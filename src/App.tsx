@@ -17,9 +17,9 @@ function App() {
       case 'story':
         return <StoryPage />;
       case 'crops':
-        return <CropsPage />;
+        return <CropsPage setCurrentPage={setCurrentPage} />;
       case 'gallery':
-        return <GalleryPage />;
+        return <GalleryPage setCurrentPage={setCurrentPage} />;
       case 'education':
         return <EducationPage />;
       case 'contact':
